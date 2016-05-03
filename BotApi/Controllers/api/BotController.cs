@@ -17,6 +17,8 @@ namespace BotApi.Controllers.api
         public BotController()
         {
             Bot = new Telegram.Bot.Api("207074898:AAELQj4ybCMIDfQ7z7jHqP1bbJIO1QvLc_I");
+
+            Bot.SetWebhook("https://telegrambotapi.azurewebsites.net/api/bot/ProcessMessage").Wait();
         }
 
         [HttpGet]
